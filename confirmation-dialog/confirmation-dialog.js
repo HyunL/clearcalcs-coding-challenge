@@ -28,6 +28,11 @@ template.innerHTML = `
           border: 1px solid #888;
           padding: 7px;
           font-weight: 100;
+          background: white;
+        }
+        
+        button:hover {
+            background: #e0e0e0;
         }
         
         #yes {
