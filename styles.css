@@ -17,8 +17,10 @@ button {
     width: 200px;
     height: 100px;
     font-size: 35px;
-    border: 1px solid black;
+    border: 1px hidden;
     border-radius: 20px;
+    background: #3474eb;
+    color: white;
 }
 
 #dialog-text {
