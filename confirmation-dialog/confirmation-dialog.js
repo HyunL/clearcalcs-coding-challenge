@@ -40,6 +40,24 @@ class ConfirmationDialog extends HTMLElement {
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
+
+    yesListener = () => {
+        this.style.display = "none";
+    };
+
+    cancelListener = () => {
+        this.style.display = "none";
+    }
+
+    connectedCallback() {
+        this.shadowRoot.querySelector('#yes').addEventListener('click', this.yesListener)
+        this.shadowRoot.querySelector('#cancel').addEventListener('click', this.cancelListener)
+    }
+
+    disconnectedCallback() {
+        this.shadowRoot.querySelector('#yes').removeEventListener('click', this.yesListener);
+        this.shadowRoot.querySelector('#cancel').removeEventListener('click', this.cancelListener);
+    }
 }
 
 
