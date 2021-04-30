@@ -42,10 +42,12 @@ class ConfirmationDialog extends HTMLElement {
     }
 
     yesListener = () => {
+        this.dispatchEvent(new Event('dialog-confirm', { bubbles: true }));
         this.style.display = "none";
     };
 
     cancelListener = () => {
+        this.dispatchEvent(new Event('dialog-cancel', { bubbles: true }));
         this.style.display = "none";
     }
 
